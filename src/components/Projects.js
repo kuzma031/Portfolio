@@ -18,7 +18,7 @@ const Projects = () => {
                         <div className="projects__box" key={index}>
                             <div className="projects__box--image">
                                 <Link to={link}>
-                                    <GatsbyImage image={image.preview} objectFit='cover' />
+                                    <GatsbyImage image={image.preview} objectFit='cover' alt={`${heading}-preview`} />
                                 </Link>
                             </div>
                             <div className="projects__box--description">
