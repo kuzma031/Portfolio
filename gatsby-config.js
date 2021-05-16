@@ -25,10 +25,10 @@ module.exports = {
           name: `gatsby-starter-default`,
           short_name: `starter`,
           start_url: `/`,
-          background_color: `#663399`,
-          theme_color: `#663399`,
+          background_color: `#2C2C2C`,
+          theme_color: `#2C2C2C`,
           display: `minimal-ui`,
-          icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        //   icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
         },
       },
       `gatsby-plugin-gatsby-cloud`,
@@ -40,7 +40,7 @@ module.exports = {
           options: {
               // You can add multiple tracking ids and a pageview event will be fired for all of them.
               trackingIds: [
-                process.env.GOOGLE_URL, // Google Analytics / GA
+                'G-R59YDCPLJ4', // Google Analytics / GA
               //   "AW-CONVERSION_ID", // Google Ads / Adwords / AW
               //   "DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
               ],

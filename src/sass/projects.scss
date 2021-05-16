@@ -134,9 +134,6 @@
 
     &--image {
         height: 240px;
-        border-top-right-radius: 6px;
-        border-top-left-radius: 6px;
-        overflow: hidden;
 
         @include responsive(1366px) {
             height: 210px;
@@ -157,6 +154,11 @@
         .gatsby-image-wrapper {
             height: 100%;
             width: 100%;
+
+            img {
+                border-top-right-radius: 6px;
+                border-top-left-radius: 6px;
+            }
         }
 
         // img {
