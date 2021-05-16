@@ -9,7 +9,7 @@ const index = () => {
 
     return (
         <Layout isHome>
-            <SEO title='404' />
+            <SEO title='404 | Đorđe Kuzmanović' />
             <Page title='404 Not Found' subtitle='Oops. The requested page is not found.' className="_404">
                 <div className="_404__icon"> 
                     <NotFound />

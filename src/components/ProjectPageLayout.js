@@ -21,7 +21,7 @@ const ProjectLayout = ({ project }) => {
 
     return (
         <Layout>
-            <SEO title={heading} />
+            <SEO title={`${heading} | Đorđe Kuzmanović`} />
             <Page className={`project project-grid`}>
                 <ProjectHeader heading={heading} data={data} image={image.full} />
                 <main className="project__body">

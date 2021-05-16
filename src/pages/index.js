@@ -11,7 +11,7 @@ const index = () => {
 
     return (
         <Layout isHome>
-            <SEO title='Home' />
+            <SEO title='Đorđe Kuzmanović' />
             <main className="main">
                 <About />
                 <Projects /> 
