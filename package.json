@@ -11,6 +11,7 @@
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-gatsby-cloud": "^2.0.0",
     "gatsby-plugin-google-gtag": "^3.5.0",
+    "gatsby-plugin-gtag": "^1.0.13",
     "gatsby-plugin-image": "^1.0.0",
     "gatsby-plugin-manifest": "^3.0.0",
     "gatsby-plugin-offline": "^4.0.0",
@@ -27,6 +28,7 @@
     "react-helmet": "^6.1.0",
     "react-ionicons": "^4.2.0",
     "react-scroll": "^1.8.2",
+    "react-swipeable": "^6.1.2",
     "sass": "^1.32.8"
   },
   "devDependencies": {

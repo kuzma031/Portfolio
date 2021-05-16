@@ -51,7 +51,7 @@ const Contact = () => {
             setTimeout(() => {
                 setSuccess(false);
                 setError(false);
-            }, 5000);
+            }, 6000);
             success && resetInputs();
         }
     }, [success,error]);

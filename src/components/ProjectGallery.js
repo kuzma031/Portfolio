@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { GatsbyImage } from "gatsby-plugin-image";
+import { useSwipeable } from 'react-swipeable';
 
 import { CloseIcon, ArrowIcon } from './Icons';
 
@@ -15,8 +16,14 @@ const ProjectGallery = ({ close, items, current = 0 }) => {
         setActive(next);
     }
 
+    const handlers = useSwipeable({
+        onSwipedLeft: () => changeImageHandler('previous'),
+        onSwipedRight: () => changeImageHandler('next'),
+        trackMouse: true
+      });
+
     return (
-        <div className="gallery">
+        <div className="gallery" {...handlers}>
             <button className="gallery__close" onClick={close}>
                 <CloseIcon />
             </button>
