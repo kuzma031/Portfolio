@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+@import './vars';
+@import './mixins';
+
+*,*::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    // font-family: 'Open Sans', sans-serif;
+    font-family: $fontMain;
+    font-size: 16px;
+    background-color: $colorSecondary;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, img, a {
+    @include selection;
+}
+
+br {
+    @include selection;
+}
+
+.layout {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+    @include responsive(991.98px) {
+        flex-direction: column;       
+    }
+}
+
+.container {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    @include container;
+}
+
+.btn {
+    @include button;
+}
+
+@import './navigation'; 
+@import './sidebar';
+@import './social'; 
+@import './page';
+@import './about';
+@import './projects';
+@import './skills';
+@import './contact';
+@import './project';
+@import './gallery';
+@import './404';

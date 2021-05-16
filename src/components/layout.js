@@ -1,55 +1,104 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
+import React, { useState } from 'react';
 
-import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import Link from './Link';
+import Sidebar from './Sidebar';
+import SocialMenu from './SocialMenu';
 
-import Header from "./header"
-import "./layout.css"
+import '../sass/index.scss';
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+const Layout = ({ children, isHome }) => {
+
+    const [ showMenu, setShowMenu ] = useState(false);
+
+    const [ projects ] = useState([
+        {
+            title: 'Home',
+            to: '/',
+            direction: 'left'
+        },
+        {
+            title: 'GridZone',
+            to: '/gridzone'
+        },
+        {
+            title: 'Valudio',
+            to: '/valudio'
+        },
+        {
+            title: 'Heata',
+            to: '/heata'
+        },
+        {
+            title: 'Scorpio',
+            to: '/scorpio'
+        },
+        {
+            title: 'Inboxroad',
+            to: '/inboxroad'
+        },
+        {
+            title: 'buildwithubs',
+            to: '/buildwithhubs'
         }
-      }
-    }
-  `)
+    ]);
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
+    const mainMenu = (
+        <ul className="navigation__menu">
+            <li>
+                <a href='#about' onClick={() => setShowMenu(false)}>
+                    About
+                </a>
+            </li>
+            <li>
+                <a href='#projects' onClick={() => setShowMenu(false)}>
+                    Projects
+                </a>
+            </li>
+            <li>
+                <a href='#tools' onClick={() => setShowMenu(false)}>
+                    Tools
+                </a>
+            </li>
+            <li>
+                <a href='#contact' onClick={() => setShowMenu(false)}>
+                    Contact
+                </a>
+            </li>
+        </ul>  
+    );
+
+    const projectsMenu = (
+        <ul className="navigation__menu">
+            {projects.map((item) => (
+                <li key={item.title}>
+                    <Link to={item.to} direction={item.direction}>
+                        {item.title}
+                    </Link>
+                </li>
+            ))}
+        </ul>
+    );
+
+    return (
+        <div className="layout">
+            <button className={`navigation__trigger ${showMenu ? 'navigation__trigger--open' : ''}`} onClick={() => setShowMenu(!showMenu)}>
+                <span />
+                <span />
+                <span />
+                <span />
+            </button>
+            <div className={`navigation ${showMenu ? 'navigation__open' : ''}`}>
+                <nav className="navigation__container">
+                    {isHome ? mainMenu : projectsMenu}
+                </nav>
+                <SocialMenu inNav />
+            </div>
+            <Sidebar />
+            <div className="page__container">
+                {children}
+            </div>
+        </div>
+    )
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout
+export default Layout;

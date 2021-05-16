@@ -1,0 +1,43 @@
+@mixin container {
+    max-width: 1360px;
+}
+
+@mixin selection {
+    &::selection {
+        background-color: $colorGold !important;
+        color: $colorWhite;
+    }
+}
+
+@mixin button {
+    background-color: $colorGold;
+    color: $colorSecondary;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px 40px;
+    cursor: pointer;
+    text-decoration: none;
+
+    @include responsive(576px) {
+        font-size: 17px;
+        padding: 16px 35px;
+    }
+
+    @include responsive(421px) {
+        font-size: 16.5px;
+    }
+
+    &:hover {
+        background-color: darken($color: $colorGold, $amount: 5);
+        color: lighten($color: $colorSecondary, $amount: 2);
+    }
+}
+
+@mixin responsive($breakpoint) {
+    @media only screen and (max-width:$breakpoint) {
+        @content;
+    }
+}

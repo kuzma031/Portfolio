@@ -1,0 +1,169 @@
+.projects {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        @include container;
+        position: relative;
+
+        @include responsive(991.98px) {
+            flex-direction: column;
+            align-items: center;   
+        }
+    }
+}
+
+.projects__box {
+    width: calc((100% - 80px) / 3);
+    margin-right: 40px;
+    margin-bottom: 40px;
+
+    @include responsive(1366px) {
+        width: calc((100% - 60px) / 3);
+        margin-right: 30px;
+    }
+
+    @include responsive(1322px) {
+        width: calc((100% - 40px) / 2);
+        margin-right: 40px;
+    }
+
+    @include responsive(1198.98px) {
+        width: 100%;
+        max-width: 420px;
+        margin-right: 0;
+    }
+
+    @include responsive(420px) {
+        margin-bottom: 30px;
+    }
+
+    &:nth-child(3n) {
+        margin-right: 0;
+
+        @include responsive(1322px) {
+            margin-right: 40px;
+        }
+
+        @include responsive(1198.98px) {
+            margin-right: 0;
+        }
+    }
+
+    &:nth-child(2n) {
+        @include responsive(1322px) {
+            margin-right: 0;
+        }
+    }
+
+    &--description {
+        padding: 10px 15px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        background-color: $colorMain;
+
+        @include responsive(351px) {
+            padding: 10px;
+        }
+    }
+
+    &--tags {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 13px;
+        font-weight: 400;
+        color: $colorLight;
+        margin-bottom: 10px;
+        line-height: 1;
+
+        .tag {
+            margin-right: 10px;
+            padding: 5px 8px;
+            border: 1px solid $colorLight;
+            border-radius: 4px;
+            @include selection;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            @include responsive(421px) {
+                padding: 4.5px 8px;
+                margin-right: 9px;
+            }
+
+            @include responsive(351px) {
+                margin-right: 8px;
+                padding: 4px 8px;
+            }
+
+            @include responsive(319.98px) {
+                margin-right: 6px;
+                font-size: 11.5px;
+                padding: 3px 7px;
+            }
+        }
+    }
+
+    &--heading {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+        text-shadow: -1px 0 $colorMain, 0 1px $colorMain, 1px 0 $colorMain, 0 -1px $colorMain;
+
+        a {
+            color: $colorLight;
+            text-decoration: none;
+        }
+    }
+
+    &--desc {
+        font-size: 14px;
+        font-weight: 500;
+        text-shadow: -1px 0 $colorMain, 0 1px $colorMain, 1px 0 $colorMain, 0 -1px $colorMain;
+        color: $colorLight2;
+    }
+
+    &--image {
+        height: 240px;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+        overflow: hidden;
+
+        @include responsive(1366px) {
+            height: 210px;
+        }
+
+        @include responsive(1322px) {
+            height: 240px;
+        }
+
+        @include responsive(420px) {
+            height: 210px;
+        }
+
+        @include responsive(340px) {
+            height: 190px;
+        }
+
+        .gatsby-image-wrapper {
+            height: 100%;
+            width: 100%;
+        }
+
+        // img {
+            // width: 80%;
+            // max-width: 900px;
+        //     height: 100%;
+        //     object-fit: contain;
+        // }
+    }
+}

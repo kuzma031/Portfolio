@@ -1,0 +1,182 @@
+.project__gallery {
+    padding-top: 50px;
+
+    @include responsive(576px) {
+        padding-top: 35px;
+    }
+    
+    &--container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &--header {
+        margin-bottom: 20px;
+        line-height: 1;
+        color: $colorLight2;
+    }
+
+    &--heading {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        color: $colorLight; 
+    }
+
+    &--desc {
+        font-size: 12px; 
+        line-height: 1.4;
+        text-decoration: underline; 
+    }
+
+    &--item {
+        height: 260px;
+        width: calc((100% - 20px) / 2);
+        margin-bottom: 20px;
+        margin-right: 20px;
+        border-radius: 6px;
+        overflow: hidden;
+        cursor: pointer;
+
+        @include responsive(767.98px) {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        @include responsive(440px) {
+            height: 240px;
+        }
+
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        .gatsby-image-wrapper {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.gallery { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: $colorBlack, $alpha: 0.7);
+    display: flex;
+    justify-content: center;
+    z-index: 500;
+
+    &__close {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        cursor: pointer;
+        background: none;
+        outline: none;
+        border: none;
+
+        @include responsive(1198.98px) {
+            width: 40px;
+            height: 40px;
+        }
+
+        @include responsive(991.98px) {
+            right: 20px;
+        }
+
+        @include responsive(576px) {
+            width: 30px;
+            height: 30px;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+            fill: $colorLight;
+        }
+    }
+
+    &__navigation {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        padding: 0 50px;
+        display: flex;
+        justify-content: space-between;
+
+        @include responsive(991.98px) {
+            padding: 0 20px;
+        }
+
+        @include responsive(576px) {
+            padding: 0 5px;
+        }
+
+        &--left, &--right {
+            width: 50px;
+            height: 50px;
+            background: none;
+            outline: none;
+            border: none;
+            cursor: pointer;
+
+            @include responsive(1198.98px) {
+                width: 40px;
+                height: 40px;
+            }
+
+            @include responsive(576px) {
+                width: 30px;
+                height: 30px;
+            }
+
+            svg {
+                width: 100%;
+                height: 100%;
+                fill: $colorLight;
+            }
+        }
+
+        &--left {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__container {
+        width: calc(100% - 200px);
+        height: 100%;
+        padding: 0 20px;
+
+        @include responsive(1198.98px) {
+            width: calc(100% - 180px);
+        }
+
+        @include responsive(991.98px) {
+            width: calc(100% - 120px);
+        }
+
+        @include responsive(576px) {
+            width: calc(100% - 70px);
+            padding: 0 10px;
+        }
+
+        &--item {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gatsby-image-wrapper {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
