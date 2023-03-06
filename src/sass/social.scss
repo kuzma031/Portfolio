@@ -1,8 +1,10 @@
 .social {
-    padding-top: 20px;
+    padding: 20px;
+    padding-bottom: 20px;
 
     @include responsive(991.98px) {
         display: none;
+        padding: 0;
     }
 
     &__navigation {

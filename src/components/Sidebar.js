@@ -37,7 +37,7 @@ const Sidebar = () => {
                         <span>Software Developer</span>
                     </h3>
                     <h4 className="sidebar__country">
-                        Belgrade, Serbia
+                        Serbia
                     </h4>
                     <SocialMenu />
                 </div>

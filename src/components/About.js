@@ -22,8 +22,8 @@ const About = () => {
                         Many people think development is easy and relaxing job, but the reality is totally different. You need lots of creativity and dedication. Deadlines are tight. Many developers burn out fast. When I need to chill my brain out, I play basketball or go out for a couple of drinks. Also, I like to travel and explore new places around my country and around the world. 
                     </p>
                     <p className="about__text">
-                        I'm a perfectionist person. It has advantages and disadvantages. One of the advantages that is good for business is that I don't stop until everything is perfect. 
-                        So if you want to work with dedicated developer, I'm currently open for new opportunities.
+                        {/* I'm a perfectionist person. It has advantages and disadvantages. One of the advantages that is good for business is that I don't stop until everything is perfect.  */}
+                        If you want to work with dedicated developer, I'm currently open for new opportunities.
                     </p>
                     <p className="about__text"> 
                         <a href="#contact">Let's make something special!</a>

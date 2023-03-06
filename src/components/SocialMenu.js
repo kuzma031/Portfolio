@@ -14,9 +14,9 @@ const SocialMenu = ({ inNav }) => (
             <li className="social__icon social__icon--github">
                 <a href="https://github.com/kuzma031"  role="button" aria-label="github link" target="_blank" rel="noreferrer noopener"><GitHubIcon /></a>
             </li>
-            <li className="social__icon social__icon--instagram">
+            {/* <li className="social__icon social__icon--instagram">
                 <a href="https://www.instagram.com/kuzmadj/"  role="button" aria-label="instagram link" target="_blank" rel="noreferrer noopener"><InstagramIcon /></a>
-            </li>
+            </li> */}
             <li className="social__icon social__icon--instagram">
                 <a href="https://www.upwork.com/freelancers/~0195625e67b211557b"  role="button" aria-label="upwork link" target="_blank" rel="noreferrer noopener"><UpworkIcon /></a>
             </li>
