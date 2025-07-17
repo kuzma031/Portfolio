@@ -1,129 +1,128 @@
 .contact__form {
+  &--container {
+    width: 100%;
+    max-width: 768px;
+    display: block;
+    margin: 60px auto;
+    position: relative;
 
-    &--container {
-        width: 100%;
-        max-width: 768px;
-        display: block;
-        margin: 60px auto;
-        position: relative; 
-
-        @include responsive(1366px) {
-            max-width: 620px;
-        }
-
-        @include responsive(576px) {
-            margin: 40px 0 0;
-        }
+    @include responsive(1366px) {
+      max-width: 620px;
     }
 
-    &--message {
-        padding-top: 20px;
-        font-size: 17px;
-        line-height: 1.6;
-        color: $colorLight;
-        text-align: center;
+    @include responsive(576px) {
+      margin: 40px 0 0;
+    }
+  }
 
-        &.error {
-            color: #FA1E0E;
-        }
+  &--message {
+    padding-top: 20px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: $colorLight;
+    text-align: center;
 
-        &.success {
-            color: #4AA96C;
-        }
-
-        .block {
-            display: block;
-        }
-
-        .email {
-            color: $colorLight;
-        }
+    &.error {
+      color: #fa1e0e;
     }
 
-    &--icon {
-        position: absolute;
-        left: -200px;
-        top: -80px;  
-        width: 120px;
-        height: 124px;
-        transform: rotate(-25deg);
-
-        @include responsive(1366px) {
-            left: -160px;
-        }
-
-        @include responsive(1322px) {
-            width: 100px;
-            height: 103px;
-            left: -130px;
-        }
-
-        @include responsive(1200px) {
-            left: -20px;
-            top: -140px;
-        }
-
-        @include responsive(576px) {
-            top: -240px;
-            left: -25px;
-        }
-        
-        svg {
-            width: 100%;
-            height: 100%;
-            fill: $colorLight;
-        }
+    &.success {
+      color: #4aa96c;
     }
 
-    &--group {
-        width: 100%;
-        margin-bottom: 24px;
-
-        @include responsive(576px) {
-            margin-bottom: 20px;
-        }
+    .block {
+      display: block;
     }
 
-    input,textarea {
-        width: 100%;
-        background-color: $colorLight !important;
-        color: $colorMain !important;
-        border: none;
-        outline: none;
-        padding: 12.5px 15px;
-        font-size: 17px;
-        font-weight: 600;
-        letter-spacing: 1.1px;
-        border-radius: 4px;
-        @include selection;
+    .email {
+      color: $colorLight;
+    }
+  }
 
-        @include responsive(421px) {
-            font-size: 16px;
-            padding: 10px 12.5px;
-        }
+  &--icon {
+    position: absolute;
+    left: -200px;
+    top: -80px;
+    width: 120px;
+    height: 124px;
+    transform: rotate(-25deg);
 
-        &::placeholder {
-            color: $colorMain;
-            font-family: $fontMain;
-            font-weight: 500;
-        }
+    @include responsive(1366px) {
+      left: -160px;
     }
 
-    input {
-
+    @include responsive(1322px) {
+      width: 100px;
+      height: 103px;
+      left: -130px;
     }
 
-    textarea {
-        resize: none;
-        font-family: $fontMain;
+    @include responsive(1200px) {
+      left: -20px;
+      top: -140px;
     }
 
-    &--submit {
-        display: flex;
-        justify-content: center;
-
-        button {
-            @include button;
-        }
+    @include responsive(576px) {
+      top: -240px;
+      left: -25px;
     }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $colorLight;
+    }
+  }
+
+  &--group {
+    width: 100%;
+    margin-bottom: 24px;
+
+    @include responsive(576px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    background-color: $colorLight !important;
+    color: $colorMain !important;
+    border: none;
+    outline: none;
+    padding: 12.5px 15px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    @include selection;
+
+    @include responsive(421px) {
+      font-size: 16px;
+      padding: 10px 12.5px;
+    }
+
+    &::placeholder {
+      color: $colorMain;
+      font-family: $fontMain;
+      font-weight: 500;
+    }
+  }
+
+  input {
+  }
+
+  textarea {
+    resize: none;
+    font-family: $fontMain;
+  }
+
+  &--submit {
+    display: flex;
+    justify-content: center;
+
+    button {
+      @include button;
+    }
+  }
 }

@@ -1,92 +1,107 @@
 .page {
-    width: 100%;
-    min-height: 100vh;
-    padding: 50px;
+  width: 100%;
+  // min-height: 100vh;
+  padding: 50px;
 
-    @include responsive(1366px) {
-        padding: 50px 40px;
+  @include responsive(1366px) {
+    padding: 50px 40px;
+  }
+
+  @include responsive(576px) {
+    padding: 30px 20px;
+    min-height: auto;
+  }
+
+  @include responsive(421px) {
+    padding: 30px 15px;
+  }
+
+  @include responsive(319.98px) {
+    padding: 20px 10px;
+  }
+
+  &:first-of-type {
+    padding-top: 120px;
+
+    @include responsive(991.98px) {
+      padding-top: 75px;
     }
+  }
 
-    @include responsive(576px) {
-        padding: 30px 20px;
-        min-height: auto;
+  &__container {
+    flex: 1;
+
+    @include responsive(991.98px) {
+      padding-top: 85px;
+    }
+  }
+
+  &__title {
+    font-size: 42px;
+    font-weight: 400;
+    color: $colorLight;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 75px;
+
+    @include responsive(991.98px) {
+      margin-bottom: 45px;
     }
 
     @include responsive(421px) {
-        padding: 30px 15px;
+      font-size: 40px;
+    }
+
+    @include responsive(351px) {
+      font-size: 36px;
     }
 
     @include responsive(319.98px) {
-        padding: 20px 10px;
+      font-size: 30px;
     }
+  }
 
-    &__container {
-        flex: 1;
+  &__subtitle {
+    color: $colorLight;
+    font-size: 17px;
+    line-height: 1.6;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+  }
 
-        @include responsive(991.98px) {
-            padding-top: 85px;
-        }
+  // &__about, &__projects, &__skills, &__contact {
+  //     @include responsive(576px) {
+  //         padding-top: 80px;
+  //     }
+  // }
+
+  &__skills,
+  &__about,
+  &__projects {
+    display: flex;
+    flex-direction: column;
+
+    @include responsive(1198.98px) {
+      padding-bottom: 0;
     }
+  }
 
-    &__title {
-        font-size: 42px;
-        font-weight: 400;
-        color: $colorLight;
-        text-align: center;
-        letter-spacing: 2px;
-        margin-bottom: 50px;
+  &__about,
+  &__skills {
+    justify-content: center;
+    align-items: center;
+  }
 
-        @include responsive(421px) {
-            font-size: 40px;
-        }
+  &__projects {
+    align-items: center;
+  }
 
-        @include responsive(351px) {
-            font-size: 36px;
-        }
-
-        @include responsive(319.98px) {
-            font-size: 30px;
-        }
+  &__contact {
+    .page__subtitle br {
+      @include responsive(576px) {
+        display: none;
+      }
     }
-
-    &__subtitle {
-        color: $colorLight;
-        font-size: 17px;
-        line-height: 1.6;
-        font-weight: 400;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    // &__about, &__projects, &__skills, &__contact {
-    //     @include responsive(576px) {
-    //         padding-top: 80px;
-    //     }
-    // }
-
-    &__skills, &__about, &__projects {
-        display: flex;
-        flex-direction: column;
-
-        @include responsive(1198.98px) {
-            padding-bottom: 0;
-        }
-    }
-
-    &__about, &__skills {
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__projects {
-        align-items: center;
-    }
-
-    &__contact {
-        .page__subtitle br {
-            @include responsive(576px) {
-                display: none;
-            }
-        }
-    }
+  }
 }

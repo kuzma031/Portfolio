@@ -1,99 +1,211 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# Portfolio Website - Next.js + TypeScript
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+A modern portfolio website built with Next.js and TypeScript, migrated from Gatsby.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+## 🚀 Features
 
-## 🚀 Quick start
+- **Next.js 14** - Latest React framework with App Router
+- **TypeScript** - Full type safety and better developer experience
+- **SASS/SCSS** - Advanced styling with variables and mixins
+- **Responsive Design** - Mobile-first approach
+- **SEO Optimized** - Meta tags, Open Graph, Twitter Cards
+- **Performance** - Optimized images and code splitting
+- **Google Analytics** - Built-in tracking
 
-1.  **Create a Gatsby site.**
+## 📁 Project Structure
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+```
+portfolio/
+├── public/                 # Static assets
+│   └── images/            # Images and screenshots
+├── src/
+│   ├── components/        # React components
+│   ├── hooks/            # Custom React hooks
+│   ├── pages/            # Next.js pages
+│   ├── sass/             # SCSS stylesheets
+│   └── types/            # TypeScript type definitions
+├── next.config.js         # Next.js configuration
+├── tsconfig.json          # TypeScript configuration
+└── package.json           # Dependencies and scripts
+```
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+## 🛠️ Tech Stack
 
-1.  **Start developing.**
+- **Framework**: Next.js 14
+- **Language**: TypeScript
+- **Styling**: SASS/SCSS
+- **Icons**: React Ionics
+- **Animations**: GSAP
+- **Analytics**: Google Analytics
 
-    Navigate into your new site’s directory and start it up.
+## 🚀 Getting Started
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+### Prerequisites
 
-1.  **Open the source code and start editing!**
+- Node.js 18+
+- npm or yarn
 
-    Your site is now running at `http://localhost:8000`!
+### Installation
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
+1. Clone the repository:
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+```bash
+git clone <repository-url>
+cd portfolio
+```
 
-## 🧐 What's inside?
+2. Install dependencies:
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+```bash
+npm install
+```
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+3. Run the development server:
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+```bash
+npm run dev
+```
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+## 📝 Available Scripts
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
+- `npm run format` - Format code with Prettier
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+## 🔧 Configuration
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
+### Next.js Config (`next.config.js`)
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+- SASS support enabled
+- Image optimization configured
+- Static export options available
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+### TypeScript Config (`tsconfig.json`)
 
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
+- Strict mode enabled
+- Path aliases configured
+- JSX preserved for Next.js
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+## 📱 Pages
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+- **Home** (`/`) - Main portfolio page with sections
+- **Project Pages** - Individual project showcases:
+  - `/gridzone` - GridZone project
+  - `/valudio` - Valudio project
+  - `/heata` - Heata project
+  - `/scorpio` - Scorpio project
+  - `/inboxroad` - Inboxroad project
+  - `/buildwithhubs` - BuildWithHubs project
+- **404** - Custom error page
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+## 🎨 Components
 
-## 🎓 Learning Gatsby
+### Core Components
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
+- `Layout` - Main layout wrapper
+- `SEO` - SEO and meta tag management
+- `Link` - Custom navigation with transitions
+- `Page` - Page wrapper component
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+### Project Components
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+- `ProjectPageLayout` - Project page layout
+- `ProjectHeader` - Project header with info
+- `ProjectFooter` - Project footer with screenshots
+- `ProjectGallery` - Image gallery modal
 
-## 💫 Deploy
+### Section Components
 
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/cloud/)
+- `About` - About section
+- `Projects` - Projects showcase
+- `Skills` - Skills and technologies
+- `Contact` - Contact information
 
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
+## 🔄 Migration from Gatsby
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+This project was migrated from Gatsby to Next.js with the following changes:
+
+### Key Changes
+
+1. **Framework**: Gatsby → Next.js 14
+2. **Language**: JavaScript → TypeScript
+3. **Routing**: Gatsby pages → Next.js pages
+4. **SEO**: React Helmet → Next.js Head
+5. **Images**: Gatsby Image → Next.js Image
+6. **Data**: GraphQL → Static data
+7. **Styling**: SASS (unchanged)
+
+### Removed Dependencies
+
+- All Gatsby-specific packages
+- React Helmet
+- PropTypes
+- Gatsby plugins
+
+### Added Dependencies
+
+- Next.js 14
+- TypeScript
+- Type definitions for React and Node.js
+
+## 🎯 SEO Features
+
+- Dynamic meta tags
+- Open Graph support
+- Twitter Cards
+- Canonical URLs
+- Robots meta tags
+- Structured data ready
+
+## 📊 Performance
+
+- Automatic code splitting
+- Image optimization
+- CSS optimization
+- Bundle analysis available
+- Lighthouse optimized
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+1. Connect your GitHub repository
+2. Deploy automatically on push
+
+### Netlify
+
+1. Build command: `npm run build`
+2. Publish directory: `out` (if using static export)
+
+### Static Export
+
+Uncomment the export configuration in `next.config.js` for static hosting.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the 0BSD License.
+
+## 👨‍💻 Author
+
+**Đorđe Kuzmanović**
+
+- Full-Stack Software Developer
+- Expert in JavaScript, React and Node.js
+- [Portfolio](https://djordjekuzmanovic.com)
+
+---
+
+Built with ❤️ using Next.js and TypeScript

@@ -1,125 +1,127 @@
 .project {
-    display: block;
-    margin: 0 auto;
-    max-width: 1140px;
-    padding-top: 50px;
+  display: block;
+  margin: 0 auto;
+  max-width: 1140px;
+  padding-top: 50px;
 
-    @include responsive(1322px) {
-        padding-top: 45px;
+  @include responsive(1322px) {
+    padding-top: 45px;
+  }
+
+  hr {
+    background-color: $colorLight2;
+    border: none;
+    height: 1px;
+  }
+
+  &__header {
+    color: $colorWhite;
+    align-items: center;
+    line-height: 1;
+
+    &--main {
+      font-size: 44px;
+      font-weight: 500;
+      letter-spacing: 1.4px;
+      text-align: center;
+      margin-bottom: 75px;
+
+      @include responsive(576px) {
+        margin-bottom: 40px;
+      }
     }
 
-    hr {
-        background-color: $colorLight2;
-        border: none;
-        height: 1px;
+    &--content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
     }
 
-    &__header {
+    &--image {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+
+      @include responsive(1198.98px) {
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+      }
+
+      img {
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &--data {
+      width: 40%;
+      padding-left: 30px;
+      color: $colorLight;
+      line-height: 1.7;
+
+      @include responsive(1198.98px) {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        padding-left: 0;
+      }
+
+      a {
         color: $colorWhite;
-        align-items: center;
+        font-size: 22px;
+        font-weight: 500;
         line-height: 1;
+      }
 
-        &--main {
-            font-size: 44px;
-            font-weight: 500;
-            letter-spacing: 1.4px;
-            text-align: center;
-            margin-bottom: 50px;
-
-            @include responsive(576px) {
-                margin-bottom: 40px;
-            }
-        }
-
-        &--content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            justify-content: space-between;
-        }
-
-        &--image {
-            width: 60%;
-            display: flex;
-            justify-content: center;
-            
-            @include responsive(1198.98px) {
-                width: 100%;
-                margin-bottom: 40px;
-            }
-            
-            .gatsby-image-wrapper img {
-                border-radius: 6px;
-                overflow: hidden;
-            }
-        }
-
-        &--data {
-            width: 40%;
-            padding-left: 30px;
-            color: $colorLight;
-            line-height: 1.7;
-
-            @include responsive(1198.98px) {
-                width: 100%;
-                max-width: 900px;
-                margin: 0 auto;
-                padding-left: 0;
-            }
-
-            a {
-                color: $colorWhite;
-                font-size: 22px;
-                font-weight: 500;
-                line-height: 1;
-            }
-
-            .box {
-                font-size: 15px;
-                font-weight: 300;
-                margin-bottom: 25px;
-
-                @include responsive(576px) {
-                    margin-bottom: 20px;
-                }
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-
-            .bold {
-                font-size: 18px;
-                font-weight: 500;
-                margin-bottom: 8px;
-            }
-        }
-    }
-
-    &__short {
-        font-size: 19px;
-
-        a {
-            color: $colorWhite; 
-        }
-    }
-
-    &__body {
-        padding: 50px 0;
-        font-size: 17px;
-        color: $colorLight2;
-        line-height: 1.8;
+      .box {
+        font-size: 15px;
+        font-weight: 300;
+        margin-bottom: 25px;
 
         @include responsive(576px) {
-            padding: 35px 0;
+          margin-bottom: 20px;
         }
 
-        p {
-            margin-bottom: 30px;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
+        &:last-child {
+          margin-bottom: 0;
         }
+      }
+
+      .bold {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
     }
+  }
+
+  &__short {
+    font-size: 19px;
+
+    a {
+      color: $colorWhite;
+    }
+  }
+
+  &__body {
+    padding: 50px 0;
+    font-size: 17px;
+    color: $colorLight;
+    line-height: 1.8;
+
+    @include responsive(576px) {
+      padding: 35px 0;
+    }
+
+    p {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
